@@ -40,8 +40,11 @@ $.ajax({
 for (var i = 0; i < response.weather.length; i++) {
   console.log(response.weather[i].description);
   var cityHolder = $("#city-holder");
-      cityHolder.append("Description: " + response.weather[i].description)
+      // cityHolder.append("Description: " + response.weather[i].description)
 }
+var weatherHolder = $("#weather-holder").html("<h1>" + response.weather[i] + "</h1>");
+  // weatherHolder.append("#city-holder");
+
   
 
 
