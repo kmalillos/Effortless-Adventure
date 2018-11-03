@@ -1,4 +1,4 @@
-// API Key: 73526c5158647a3534730555e7b56b
+// Meetup API Key: 73526c5158647a3534730555e7b56b
 // NEED THIS: https://cors-anywhere.herokuapp.com/
 
 // =========================================================================================
@@ -32,8 +32,6 @@ $.ajax({
 }).then(function (response) {
   console.log(response);
   console.log(response.city.city);
-  
-  $("#city-holder").text("City: " + response.city.city);
 
   for (var i = 0; i < response.events.length; i++) {
 
