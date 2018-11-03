@@ -4,7 +4,7 @@
 // GLOBAL VARIABLES
 // =========================================================================================
 
-var city = "";
+var city = "Denver";
 var APIkey = "89635bfae26331da7c18c8fa78db7fac";
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=+" + city + "&appid=" + APIkey;
 
@@ -34,8 +34,6 @@ $.ajax({
 
   // temperature
   console.log(response.main.temp);
-    // Create CODE HERE to calculate the temperature (converted from Kelvin)
-     // Hint: To convert from Kelvin to Fahrenheit: F = (K - 273.15) * 1.80 + 32
      var tempF = ((response.main.temp - 273.15) * 1.80 + 32).toFixed(0);
      console.log(tempF)
 
