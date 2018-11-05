@@ -66,8 +66,8 @@ function displayButtons() {
 };
 
 function clickButton() {
-    $(".city-button").on("click", function() {
-        console.log("CLICK");
+    $(".city-button").one("click", function() {
+        //console.log("CLICK");
         console.log($(this).attr("city"));
     }); 
 }
