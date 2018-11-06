@@ -30,12 +30,12 @@ $.ajax({
   url: queryURL,
   method: "GET"
 }).then(function (response) {
-  console.log(response);
-  console.log(response.city.city);
+  //console.log(response);
+  //console.log(response.city.city);
 
   for (var i = 0; i < response.events.length; i++) {
 
-    console.log(response.events[i].name + " " + response.events[i].link);
+    //console.log(response.events[i].name + " " + response.events[i].link);
    
     // $("#event-holder").append(response.events[i].name + " " + response.events[i].link);
    

@@ -8,30 +8,34 @@
     background-size: cover;
     position: relative;
     font-family: fantasy;
-    
-    
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+}
+
+button {
+    margin: 5px;
+}
+
 .card{
     margin-left:70px;
     float:left;
 }
 
-.card-header{
+.card-body{
+    margin-left:100px;
+}
 
+.card-header{
     margin-left:70px;
 }
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width:50%;
-    
-     }
+
 #search-box{
     text-align:center;
 }
 
-.card-body{
-    margin-left:100px;
-}
 
