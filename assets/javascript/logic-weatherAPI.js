@@ -66,14 +66,14 @@ $(document).on("click", ".city-button", function () {
 
     //icon
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&apikey=89635bfae26331da7c18c8fa78db7fac", function (data) {
-      console.log(data);
-      console.log(data.weather);
-      console.log(data.weather[0]);
-      console.log(data.weather[0].icon);
+      // console.log(data);
+      // console.log(data.weather);
+      // console.log(data.weather[0]);
+      // console.log(data.weather[0].icon);
 
       var icon = data.weather[0].icon
       var url = 'http://openweathermap.org/img/w/' + icon + '.png'
-      console.log(url);
+      // console.log(url);
 
       $(".icon").html("<img class = 'newIcon' src=" + url + ">");
 
