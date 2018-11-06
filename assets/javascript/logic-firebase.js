@@ -38,6 +38,8 @@ function addCity() {
 
 function displayButtons() {
 
+    // clickButton();
+    
     database.ref().on("child_added", function(snapshot) {
 
         // to capture snapshot value
@@ -55,7 +57,7 @@ function displayButtons() {
         buttonHolder.append(button);
 
         //buttons work here
-        clickButton();
+        // clickButton();
 
     // Handle the errors
     }, function(errorObject) {
@@ -74,7 +76,7 @@ function displayButtons() {
 
 // click Button with Weather API 
 function clickButton() {
-    $(".city-button").on("click", function() {
+    $(document).on("click", ".city-button", function() {
         console.log($(this).attr("city"));
 
         var city = $(this).attr("city");
@@ -103,17 +105,26 @@ function clickButton() {
           
           
             // weather description
-            for (var i = 0; i < response.weather.length; i++) {
-              
-              //console.log(response.weather[i].description);
-          
-              var weatherHolder = $("#weather-holder");
-              var description = response.weather[i].description;
-          
-              weatherHolder.append(description);
-          
-            }
-          
+
+            // for (var i = 0; i < response.weather.length; i++) {
+    
+            //     console.log(response.weather[i].description);
+            
+            //     var weatherHolder = $("#weather-holder");
+            //     var description = response.weather[i].description;
+            
+            //     weatherHolder.append(description);
+
+            // }
+
+            console.log(response.weather[0].description);
+
+            var weatherHolder = $("#weather-holder");
+            var description = response.weather[0].description;
+            weatherHolder.append(description);
+
+
+
           }); // close AJAX call
 
 
@@ -128,3 +139,4 @@ addCity();
 
 displayButtons();
 
+clickButton();
