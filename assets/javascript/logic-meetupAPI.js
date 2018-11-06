@@ -22,9 +22,14 @@ $.ajax({
   console.log(response);
   console.log(response.events);
 
+
   for (var i = 0; i < response.events.length; i++) {
     $("#event-holder").append(response.events[i].name + " " + response.events[i].link);
 
+    //console.log(response.events[i].name + " " + response.events[i].link);
+   
+    // $("#event-holder").append(response.events[i].name + " " + response.events[i].link);
+   
     var eventHolder = $("#event-holder");
     var list = $("<ul>").append("<li>" +response.events[i].name + " " + response.events[i].link + "</li>");
 
