@@ -52,5 +52,28 @@ $.ajax({
     weatherHolder.append(description);
 
   }
+//icon
+
+$.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Denver&apikey=89635bfae26331da7c18c8fa78db7fac", function( data ) {
+ console.log(data);
+ console.log(data.weather);
+ console.log(data.weather[0]);
+ console.log(data.weather[0].icon);
+
+ var icon = data.weather[0].icon
+ var url = 'http://openweathermap.org/img/w/' + icon + '.png'
+ console.log(url);
+
+   $(".icon").html("<img class = 'newIcon' src=" + url + ">");
+
+});
+
+  // var iconCode = data.weather[0].icon;
+
+  //          
+  // var iconUrl =
+
+  //   "http://openweathermap.org/img/w/" + iconCode + ".png"; 
+
 
 });
