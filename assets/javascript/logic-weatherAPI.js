@@ -23,6 +23,7 @@ var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=+" + city + "&
 // MAIN PROCESS
 // =========================================================================================
 
+
 // AJAX WORKS ***KEEP***
 $.ajax({
   url: queryURL,
