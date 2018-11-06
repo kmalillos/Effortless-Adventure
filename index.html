@@ -10,8 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- Firebase link  -->
@@ -65,13 +64,17 @@
 
     <!-- MEET UP API HOOK HERE -->
     <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">Events</h5>
+        <div id="locationColorado">
+            <h5 id="eventLocation">Events shown here</h5>
+            <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
 
             <div><span id="event-holder"></span></div>
 
         </div>
     </div>
+
+    <!--this is the change-->
+    <div style="width: 640px; height: 480px" id="mapContainer">Map Shown Here</div>
 
     <!-- Bootstrap jQuery links -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
