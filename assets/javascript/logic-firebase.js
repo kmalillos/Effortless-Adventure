@@ -37,7 +37,7 @@ function addCity() {
 };
 
 function displayButtons() {
-
+    
     database.ref().on("child_added", function(snapshot) {
 
         // to capture snapshot value
@@ -47,12 +47,13 @@ function displayButtons() {
         // HOOK TO HTML
         var buttonHolder = $("#button-holder");
         var button = $("<button>")
+            button.addClass("city-button")
             button.addClass("btn btn-primary")
             button.attr("city", city)
             button.append(city);
 
         buttonHolder.append(button);
-    
+
     // Handle the errors
     }, function(errorObject) {
         console.log("Errors handled: " + errorObject.code);
@@ -61,6 +62,14 @@ function displayButtons() {
     
 };
 
+// function clickButton() {
+//     $(document).on("click", ".city-button", function() {
+//         //console.log("CLICK");
+//         console.log($(this).attr("city"));
+//     }); 
+// }
+
+
 // =================================================================================================================================
 // Main Process
 // =================================================================================================================================
@@ -68,3 +77,6 @@ function displayButtons() {
 addCity();
 
 displayButtons();
+
+// clickButton();
+
