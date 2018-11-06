@@ -8,6 +8,12 @@
     background-size: cover;
     position: relative;
     font-family: fantasy;
+    color:white;
+    text-shadow:
+    -1px -1px 0 #555,
+    1px -1px 0 #555,
+    -1px 1px 0 #555,
+    1px 1px 0 #555;
 }
 
 .center {
@@ -38,4 +44,9 @@ button {
     text-align:center;
 }
 
-
+.btn-floating.btn-large  {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    background-color:navy;
+}
