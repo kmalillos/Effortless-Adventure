@@ -35,45 +35,56 @@ $(document).on("click", ".city-button", function () {
     // MEETUP API AJAX CALL
     // =========================================================================================
 
-    var APIkey = "73526c5158647a3534730555e7b56b";
+    var meetupAPIkey = "73526c5158647a3534730555e7b56b";
     var CORSlink = "https://cors-anywhere.herokuapp.com/"
-    var queryURL = CORSlink + "https://api.meetup.com/find/upcoming_events?key=" + APIkey + "&sign=true&photo-host=public&lon=" + long + "&page=10&lat=" + lat;
+    var meetupQueryURL = CORSlink + "https://api.meetup.com/find/upcoming_events?key=" + meetupAPIkey + "&sign=true&photo-host=public&lon=" + long + "&page=10&lat=" + lat;
     // https://api.meetup.com/find/upcoming_events?&sign=true&photo-host=public&lon=-104.990251&page=10&lat=39.7392358
 
     $.ajax({
-      url: queryURL,
+      url: meetupQueryURL,
       method: "GET"
     }).then(function (response) {
-      
+    
       // console.log(response);
 
       var eventHolder = $("#event-holder");
 
+      // CLEAR EVENT HOLDER BEFORE FOR-LOOP
       eventHolder.empty();
 
+      // FOR LOOPS TO LIST EVENTS
       for (var i = 0; i < response.events.length; i++) {
-
-        //console.log(response);
+        
         console.log(response.events[i]);
 
         // $("#event-holder").append(response.events[i].name + " " + response.events[i].link);
 
-        var list = $("<ul>");
+        // VARIABLES TO GRAB MEETUP JSON OBJECTS
         var eventName = response.events[i].name;
         var eventDate = response.events[i].local_date;
         var eventTime = response.events[i].local_time;
-        var eventVenue = response.events[i].venue.name;
+        // venue.name only works for some cities
+        //var eventVenue = response.events[i].venue.name; 
         var eventDesc = response.events[i].description
         var eventList = response.events[i].link
 
-          list.append(
-            "<li>" + eventName + " " +
-            "<li>Date: " + eventDate + " " +
-            "<li>Time: " + eventTime + " " +
-            "<li>Venue: " + eventVenue  + " " +
-            "</li>");
+        var list = $("<ul>");
 
-        eventHolder.append(list);
+            list.append(
+              "<li>" + eventName + " " +
+              "<li>Date: " + eventDate + " " +
+              "<li>Time: " + eventTime + " " +
+              //"<li>Venue: " + eventVenue + " " +
+              "</li>");
+
+        //eventHolder.append(list);
+
+        var newDiv = $("<div>");
+            newDiv.addClass("events");
+
+        newDiv.append(list);
+
+        eventHolder.append(newDiv);
 
       }; // CLOSE FOR LOOP
 
