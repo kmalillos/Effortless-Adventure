@@ -49,7 +49,7 @@ function displayButtons() {
         var buttonHolder = $("#button-holder");
         var button = $("<button>")
         button.addClass("city-button")
-        button.addClass("btn btn-primary btn-floating btn-large bright green pulse material-icons")
+        button.addClass("btn btn-primary btn-floating btn-large material-icons")
         button.attr("city", city)
         button.append(city);
 
