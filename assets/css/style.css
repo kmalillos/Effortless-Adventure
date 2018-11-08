@@ -1,8 +1,6 @@
 .jumbotron{
     text-align:center!important;
     background:url("../images/mountain-3590181__340\ \(1\)jumbo.jpg");
-    margin-left: 70px; 
-    margin-right: 70px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,4 +47,7 @@ button {
     height: 100px;
     padding: 0;
     background-color:navy;
+}
+#add-city{
+    background-color:rgb(4, 168, 72);
 }
