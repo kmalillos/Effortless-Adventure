@@ -1,31 +1,32 @@
-  // Initialize Firebase
-  var config = {
+// Initialize Firebase
+var config = {
     apiKey: "AIzaSyDpNqqdHaSx9AkHv-Bd6QtR66-nTzul9LM",
     authDomain: "groupproject1-1038d.firebaseapp.com",
     databaseURL: "https://groupproject1-1038d.firebaseio.com",
     projectId: "groupproject1-1038d",
     storageBucket: "groupproject1-1038d.appspot.com",
     messagingSenderId: "300487945283"
-  };
+};
 
-  firebase.initializeApp(config);
+firebase.initializeApp(config);
 
 // =================================================================================================================================
-// Initial Variables
+// GLOBAL VARIABLES
 // =================================================================================================================================
+
 var database = firebase.database();
 
 var city = "";
 
 // =================================================================================================================================
-// Functions
+// FUNCTION
 // =================================================================================================================================
 
 function addCity() {
 
-    $("#add-city").on("click", function(event) {
+    $("#add-city").on("click", function (event) {
         event.preventDefault();
-    
+
         //capture values of add-city form input
         city = $("#city-input").val().trim();
 
@@ -33,12 +34,12 @@ function addCity() {
         database.ref().push({
             city: city
         });
-    }); 
+    });
 };
 
 function displayButtons() {
-    
-    database.ref().on("child_added", function(snapshot) {
+
+    database.ref().on("child_added", function (snapshot) {
 
         // to capture snapshot value
         var snapshot = snapshot.val();
@@ -47,31 +48,31 @@ function displayButtons() {
         // HOOK TO HTML
         var buttonHolder = $("#button-holder");
         var button = $("<button>")
-            button.addClass("city-button")
-            button.addClass("btn btn-primary btn-floating btn-large bright green pulse material-icons")
-            button.attr("city", city)
-            button.append(city);
+        button.addClass("city-button")
+        button.addClass("btn btn-primary btn-floating btn-large bright green pulse material-icons")
+        button.attr("city", city)
+        button.append(city);
 
         buttonHolder.append(button);
 
-    // Handle the errors
-    }, function(errorObject) {
+        // Handle the errors
+    }, function (errorObject) {
         console.log("Errors handled: " + errorObject.code);
 
     }); // close database event listener
-    
+
 };
 
 // function clickButton() {
-//     $(document).on("click", ".city-button", function() {
-//         //console.log("CLICK");
-//         console.log($(this).attr("city"));
-//     }); 
-// }
+//   $(document).on("click", ".city-button", function () {
+//     //console.log("CLICK");
+//     console.log($(this).attr("city"));
+//   });
+// };
 
 
 // =================================================================================================================================
-// Main Process
+// MAIN PROCESS
 // =================================================================================================================================
 
 addCity();
@@ -79,4 +80,3 @@ addCity();
 displayButtons();
 
 // clickButton();
-
