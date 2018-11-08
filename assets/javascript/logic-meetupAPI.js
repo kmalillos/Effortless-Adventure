@@ -58,12 +58,13 @@ $(document).on("click", ".city-button", function () {
       // FOR LOOPS TO LIST EVENTS
       for (var i = 0; i < response.events.length; i++) {
         
-        //console.log(response.events[i]);
+        console.log(response.events[i]);
 
         // $("#event-holder").append(response.events[i].name + " " + response.events[i].link);
 
         // VARIABLES TO GRAB MEETUP JSON OBJECTS
         var eventName = response.events[i].name;
+        var eventHost = response.events[i].group.name;
         var eventDate = response.events[i].local_date;
         var eventDateFormat = moment(eventDate).format("MMM Do YYYY");
         var eventTime = response.events[i].local_time;
@@ -76,6 +77,7 @@ $(document).on("click", ".city-button", function () {
         var list = $("<ul>");
 
             list.append("<li><a href='" + eventLink + "' target='_blank'>" + eventName + "</a></li>");
+            list.append("<li>Hosted by: " + eventHost + "</li>");
             list.append("<li>Date: " + eventDateFormat + "</li>");
             list.append("<li>Local Time: " + eventTimeFormat + "</li>");
 
