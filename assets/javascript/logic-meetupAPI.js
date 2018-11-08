@@ -75,6 +75,7 @@ $(document).on("click", ".city-button", function () {
               "<li>Date: " + eventDate + " " +
               "<li>Time: " + eventTime + " " +
               //"<li>Venue: " + eventVenue + " " +
+              // "<li>Description: " + response.events[i].description + " " +
               "</li>");
 
         //eventHolder.append(list);

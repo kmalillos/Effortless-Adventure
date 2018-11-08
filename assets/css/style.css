@@ -16,6 +16,12 @@
     1px 1px 0 #555;
 }
 
+#map {
+    height: 400px;  
+    width: 400px;  
+   }
+
+
 .center {
     display: block;
     margin-left: auto;

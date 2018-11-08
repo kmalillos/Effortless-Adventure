@@ -49,7 +49,7 @@ $(document).on("click", ".city-button", function () {
       // console.log(response.weather[0].icon);
 
       var icon = response.weather[0].icon;
-      var url = 'http://openweathermap.org/img/w/' + icon + '.png'
+      var url = 'https://openweathermap.org/img/w/' + icon + '.png'
       // console.log(url);
 
       var iconHolder = $("#icon-holder")
