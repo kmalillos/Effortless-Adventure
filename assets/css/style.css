@@ -33,11 +33,16 @@ button {
     width: 100px;
     height: 100px;
     padding: 0;
+    background: #4caf50;
 }
 
 /* search box */
 #search-box{
     text-align:center;
+}
+
+#add-city{
+    background: #4caf50;
 }
 
 /* cards */

@@ -24,9 +24,9 @@ $(document).on("click", ".city-button", function () {
     method: "GET"
   }).then(function (response) {
     //console.log(response);
-    console.log("City: " + response.results[0].address_components[0].short_name);
-    console.log("Lat: " + response.results[0].geometry.location.lat);
-    console.log("Long: " + response.results[0].geometry.location.lng);
+    // console.log("City: " + response.results[0].address_components[0].short_name);
+    // console.log("Lat: " + response.results[0].geometry.location.lat);
+    // console.log("Long: " + response.results[0].geometry.location.lng);
 
     var lat = response.results[0].geometry.location.lat;
     var long = response.results[0].geometry.location.lng;
@@ -62,21 +62,25 @@ $(document).on("click", ".city-button", function () {
         // VARIABLES TO GRAB MEETUP JSON OBJECTS
         var eventName = response.events[i].name;
         var eventDate = response.events[i].local_date;
+        var eventDateFormat = moment(eventDate).format("MMM Do YYYY");
         var eventTime = response.events[i].local_time;
+        var eventTimeFormat = moment(eventTime, "hh:mm").format("LT");
         // venue.name only works for some cities
-        //var eventVenue = response.events[i].venue.name; 
+        // var eventVenue = response.events[i].venue.name; 
         var eventDesc = response.events[i].description
-        var eventList = response.events[i].link
+        var eventLink = response.events[i].link
 
         var list = $("<ul>");
 
-            list.append(
-              "<li>" + eventName + " " +
-              "<li>Date: " + eventDate + " " +
-              "<li>Time: " + eventTime + " " +
-              //"<li>Venue: " + eventVenue + " " +
-              // "<li>Description: " + response.events[i].description + " " +
-              "</li>");
+            list.append("<li><a href='" + eventLink + "' target='_blank'>" + eventName + "</a></li>");
+            list.append("<li>Date: " + eventDateFormat + "</li>");
+            list.append("<li>Time: " + eventTimeFormat + "</li>");
+
+            // if (typeof eventVenue !== 'undefined') {
+            // list.append("<li>Venue: " + eventVenue + "</li>");
+            // } 
+
+            // list.append("<li>Description: " + eventDesc + "</li>");
 
         //eventHolder.append(list);
 
