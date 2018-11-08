@@ -27,7 +27,7 @@ button {
     background: #4caf50;
 }
 
-
+/* card styles */
 .card{
     margin-left:70px;
     float:left;
@@ -45,17 +45,12 @@ button {
     float: left
 }
 
-/* maps */
-
-.map-card {
-    height: 100%;
-    width: 100%;
-}
-
+/* map styles */
 #map {
-    height: 400px;  
+    height: 500px;  
     width: 100%;  
-   } 
+} 
+
 
 
 
