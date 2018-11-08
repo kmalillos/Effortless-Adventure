@@ -16,12 +16,7 @@
     1px 1px 0 #555;
 }
 
-#map {
-    height: 400px;  
-    width: 400px;  
-   }
-
-
+/* makes div's center */
 .center {
     display: block;
     margin-left: auto;
@@ -29,10 +24,23 @@
     width:50%;
 }
 
+/* buttons */
 button {
     margin: 5px;
 }
 
+.btn-floating.btn-large  {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}
+
+/* search box */
+#search-box{
+    text-align:center;
+}
+
+/* cards */
 .card{
     margin-left:70px;
     float:left;
@@ -46,13 +54,17 @@ button {
     margin-left:70px;
 }
 
-#search-box{
-    text-align:center;
+/* maps */
+
+.map-card {
+    height: 100%;
+    width: 100%;
 }
 
-.btn-floating.btn-large  {
-    width: 100px;
-    height: 100px;
-    padding: 0;
-    background-color:navy;
-}
+#map {
+    height: 400px;  
+    width: 400px;  
+   }
+
+
+
