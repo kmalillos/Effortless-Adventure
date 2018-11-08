@@ -23,20 +23,19 @@ $(document).on("click", ".city-button", function () {
       //console.log(response);
 
       var weatherText = $("#weather-text");
-      weatherText.addClass("black-text");
-      weatherText.html("<h4>" + "Weather in " + city + "</h4>");
+      weatherText.html("<h5>" + "Weather in " + city + "</h5>");
   
       // SHOW CITY
         // console.log(response.name);
-        var cityHolder = $("#city-holder");
-        cityHolder.text("City: " + response.name)
+        // var cityHolder = $("#city-holder");
+        // cityHolder.text("City: " + response.name)
   
       // SHOW TEMPERATURE
         //console.log(response.main.temp);
         var tempF = ((response.main.temp - 273.15) * 1.80 + 32).toFixed(0);
         //console.log(tempF)
         var tempHolder = $("#temp-holder")
-        tempHolder.text("Temp: " + tempF)
+        tempHolder.html("Temp: " + tempF + "&#8457;")
   
   
       // SHOW WEATHER DESCRIPTION

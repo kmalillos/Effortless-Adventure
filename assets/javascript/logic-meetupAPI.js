@@ -47,6 +47,9 @@ $(document).on("click", ".city-button", function () {
     
       // console.log(response);
 
+      var eventText = $("#event-text");
+      eventText.html("<h5>" + "Events in " + city + "</h5>");
+
       var eventHolder = $("#event-holder");
 
       // CLEAR EVENT HOLDER BEFORE FOR-LOOP
