@@ -9,11 +9,14 @@
     <link rel="icon" href="assets/images/mountain-3590181_960_720 favicon.jpg" type="image/png" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Styles -->
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="assets/css/materialize.css" rel="stylesheet">
+    <link href="assets/css/materialize.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- Firebase link  -->
@@ -26,33 +29,72 @@
 <body>
 
     <!-- Title -->
-    <div class="jumbotron">
+    <!-- <div class="jumbotron">
         <h1 class="display-4"> Effortless Adventure!</h1>
 
-    </div>
+    </div> -->
 
     <!-- to "center" div in CSS -->
-    <div class="center">
-
-        <!-- Buttons to dynamically appear here -->
-
-        <div><span id="button-holder"></span></div>
-
-        <!-- Search Location Here -->
-        <div class=“card” id="search-box">
-            <h5 class=“card-header”>Add City</h5>
-            <div class=“card-body”>
-                <form>
-                    <div class="form-group">
-                        <!-- <label for="text">Add City</label> -->
-                        <input type="text" class="form-control" id="city-input" placeholder="Add City Here">
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="add-city">Submit</button>
-                </form>
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2">Effortless Adventure!</h1>
+            <div class="row center">
+              <h5 class="header col s12 light">Find events going on in your city.</h5>
             </div>
+    
+    
+            <br><br>
+    
+    
+          </div>
         </div>
-
-    </div>
+        <div class="parallax"><img src="assets/images/mountain-3590181__340 (1)jumbo.jpg" alt="mountains"></div>
+      </div>
+    
+    
+      <div class="container">
+        <div class="section">
+    
+          <!--   Icon Section   -->
+    
+          <div class="row">
+            <div class="col m12">
+              <div class="card-body">
+                <!-- to "center" div in CSS -->
+                <div class="center">
+    
+                  <!-- Buttons to dynamically appear here -->
+    
+                  <div><span id="button-holder"></span></div>
+    
+                  <!-- Search Location Here -->
+                  <div class=“card” id="search-box">
+                    <div class=“card-body”>
+                        <i class="material-icons">location_city</i>
+                      <form>
+                        <div class="form-group">
+                          <!-- <label for="text">Add City</label> -->
+                          <input type="text" class="form-control" id="city-input" placeholder="Add City Here">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="add-city">Submit</button>
+                      </form>
+                    </div>
+                  </div>
+    
+                </div>
+    
+              </div>
+            </div>
+           
+    
+              </div>
+            </div>
+    
+    
+        </div>
+      </div>
 
     <!-- WEATHER API JS HOOK HERE -->
     <div class="card" style="width: 18rem;">
@@ -116,6 +158,11 @@
 
     <!-- JavaScript: Meet Up API -->
     <script src="assets/javascript/logic-meetupAPI.js" type="text/javascript"></script>
+
+    <script src="assets/javascript/materialize.js" type="text/javascript"></script>
+    <script src="assets/javascript/materialize.min.js" type="text/javascript"></script>
+    <script src="assets/javascript/init.js" type="text/javascript"></script>
+
 
 </body>
 
