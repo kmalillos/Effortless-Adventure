@@ -62,7 +62,9 @@ $(document).on("click", ".city-button", function () {
         // VARIABLES TO GRAB MEETUP JSON OBJECTS
         var eventName = response.events[i].name;
         var eventDate = response.events[i].local_date;
+        var eventDateFormat = moment(eventDate).format("MMM Do YYYY");
         var eventTime = response.events[i].local_time;
+        var eventTimeFormat = moment(eventTime, "hh:mm").format("LT");
         // venue.name only works for some cities
         // var eventVenue = response.events[i].venue.name; 
         var eventDesc = response.events[i].description
@@ -71,8 +73,8 @@ $(document).on("click", ".city-button", function () {
         var list = $("<ul>");
 
             list.append("<li><a href='" + eventLink + "' target='_blank'>" + eventName + "</a></li>");
-            list.append("<li>Date: " + eventDate + "</li>");
-            list.append("<li>Time: " + eventTime + "</li>");
+            list.append("<li>Date: " + eventDateFormat + "</li>");
+            list.append("<li>Time: " + eventTimeFormat + "</li>");
 
             // if (typeof eventVenue !== 'undefined') {
             // list.append("<li>Venue: " + eventVenue + "</li>");
