@@ -58,7 +58,7 @@ $(document).on("click", ".city-button", function () {
       // FOR LOOPS TO LIST EVENTS
       for (var i = 0; i < response.events.length; i++) {
         
-        console.log(response.events[i]);
+        //console.log(response.events[i]);
 
         // $("#event-holder").append(response.events[i].name + " " + response.events[i].link);
 
@@ -77,7 +77,7 @@ $(document).on("click", ".city-button", function () {
 
             list.append("<li><a href='" + eventLink + "' target='_blank'>" + eventName + "</a></li>");
             list.append("<li>Date: " + eventDateFormat + "</li>");
-            list.append("<li>Time: " + eventTimeFormat + "</li>");
+            list.append("<li>Local Time: " + eventTimeFormat + "</li>");
 
             // if (typeof eventVenue !== 'undefined') {
             // list.append("<li>Venue: " + eventVenue + "</li>");
