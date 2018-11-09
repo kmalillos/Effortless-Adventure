@@ -51,7 +51,10 @@ $(document).on("click", ".city-button", function () {
       eventText.addClass("section-header");
       eventText.text("Find Your Next Adventure in " + city);
 
-      var eventHolder = $("#event-holder");
+      var eventHolder = $(".event-holder");
+          eventHolder.addClass("scroll-box");
+          eventHolder.addClass("scrolling-wrapper")
+          eventHolder.scrollLeft(300);
 
       // CLEAR EVENT HOLDER BEFORE FOR-LOOP
       eventHolder.empty();
@@ -70,6 +73,7 @@ $(document).on("click", ".city-button", function () {
         var eventDateFormat = moment(eventDate).format("MMM Do YYYY");
         var eventTime = response.events[i].local_time;
         var eventTimeFormat = moment(eventTime, "hh:mm").format("LT");
+        var eventTimeCountdown = "placeholder";
         // venue.name only works for some cities
         // var eventVenue = response.events[i].venue.name; 
         var eventDesc = response.events[i].description
@@ -81,6 +85,7 @@ $(document).on("click", ".city-button", function () {
             list.append("<li>Hosted by: " + eventHost + "</li>");
             list.append("<li>Date: " + eventDateFormat + "</li>");
             list.append("<li>Local Time: " + eventTimeFormat + "</li>");
+            list.append("<li>Time until Event: " + eventTimeCountdown + "</li>" )
 
             // if (typeof eventVenue !== 'undefined') {
             // list.append("<li>Venue: " + eventVenue + "</li>");
@@ -90,12 +95,11 @@ $(document).on("click", ".city-button", function () {
 
         //eventHolder.append(list);
 
-        var newDiv = $("<div>");
-            newDiv.addClass("events");
+        var newEvent = $("<div>");
+            newEvent.addClass("events");
 
-        newDiv.append(list);
-
-        eventHolder.append(newDiv);
+        newEvent.append(list);
+        eventHolder.append(newEvent);
 
       }; // CLOSE FOR LOOP
 

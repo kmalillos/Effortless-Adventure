@@ -60,13 +60,32 @@ button {
 /* EVENT SECTION */
 
 .events {
-    float: left;
+    /* float: left; */
+    display: inline-block;
     border: 1px solid #000;
     height: auto;
-    width: 500px;
-    margin: 5px;
-    padding: 3px;
+    width: auto;
+    margin: 10px;
+    padding: 5px;
 }
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+div.scroll-box {
+  background: none repeat scroll 0 0;
+  /* border: 3px solid #666; */
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: auto;
+}
+
 
 /* MAP SECTION */
 #map {
