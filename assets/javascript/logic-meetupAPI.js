@@ -5,11 +5,23 @@
 
 // =========================================================================================
 // EVENT LISTENER FOR ON-CLICK OF CITY-BUTTON
-// =========================================================================================
+// =========================================================================================//
+
+// WHEN PAGE LOADS
+
+var quoteText = $("#quote-text");
+    quoteText.addClass("section-header")
+    quoteText.text('"Adventure is out there..."')
+
+// $("#quote-text").hide(); 
+// $("#event-text").show();    
 
 $(document).on("click", ".city-button", function () {
 
   // console.log($(this).attr("city"));
+
+  $("#quote-text").hide(); 
+  $("#event-text").show();  
 
   // =========================================================================================
   // GOOGLE MAPS API AJAX CALL
@@ -37,7 +49,7 @@ $(document).on("click", ".city-button", function () {
 
     var meetupAPIkey = "73526c5158647a3534730555e7b56b";
     var CORSlink = "https://cors-anywhere.herokuapp.com/"
-    var meetupQueryURL = CORSlink + "https://api.meetup.com/find/upcoming_events?key=" + meetupAPIkey + "&sign=true&photo-host=public&lon=" + long + "&page=10&lat=" + lat;
+    var meetupQueryURL = CORSlink + "https://api.meetup.com/find/upcoming_events?key=" + meetupAPIkey + "&sign=true&photo-host=public&lon=" + long + "&page=15&lat=" + lat;
     // https://api.meetup.com/find/upcoming_events?&sign=true&photo-host=public&lon=-104.990251&page=10&lat=39.7392358
 
     $.ajax({
@@ -48,9 +60,13 @@ $(document).on("click", ".city-button", function () {
       // console.log(response);
 
       var eventText = $("#event-text");
-      eventText.append("<h5>" + "Events in " + city + "</h5>");
+      eventText.addClass("section-header");
+      eventText.text("Find Your Next Adventure in " + city);
 
-      var eventHolder = $("#event-holder");
+      var eventHolder = $(".event-holder");
+          eventHolder.addClass("scroll-box");
+          eventHolder.addClass("scrolling-wrapper")
+          eventHolder.scrollLeft(300);
 
       // CLEAR EVENT HOLDER BEFORE FOR-LOOP
       eventHolder.empty();
@@ -69,17 +85,19 @@ $(document).on("click", ".city-button", function () {
         var eventDateFormat = moment(eventDate).format("MMM Do YYYY");
         var eventTime = response.events[i].local_time;
         var eventTimeFormat = moment(eventTime, "hh:mm").format("LT");
+        var eventCountdown = moment(eventDate).fromNow();
         // venue.name only works for some cities
         // var eventVenue = response.events[i].venue.name; 
-        var eventDesc = response.events[i].description
+        var eventDesc = response.events[i].descriptionW
         var eventLink = response.events[i].link
 
         var list = $("<ul>");
 
             list.append("<li><a href='" + eventLink + "' target='_blank'>" + eventName + "</a></li>");
-            list.append("<li>Hosted by: " + eventHost + "</li>");
+            list.append("<li>Hosted by: <br>" + eventHost + "</li>" + "<br>");
             list.append("<li>Date: " + eventDateFormat + "</li>");
-            list.append("<li>Local Time: " + eventTimeFormat + "</li>");
+            list.append("<li>Local Time: " + eventTimeFormat + "</li>"  + "<br>");
+            list.append("<li>Countdown: Event is " + eventCountdown + "!</li>" )
 
             // if (typeof eventVenue !== 'undefined') {
             // list.append("<li>Venue: " + eventVenue + "</li>");
@@ -89,12 +107,11 @@ $(document).on("click", ".city-button", function () {
 
         //eventHolder.append(list);
 
-        var newDiv = $("<div>");
-            newDiv.addClass("events");
+        var newEvent = $("<div>");
+            newEvent.addClass("events");
 
-        newDiv.append(list);
-
-        eventHolder.append(newDiv);
+        newEvent.append(list);
+        eventHolder.append(newEvent);
 
       }; // CLOSE FOR LOOP
 

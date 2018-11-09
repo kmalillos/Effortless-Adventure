@@ -46,7 +46,8 @@ $(document).on("click", ".city-button", function () {
         var cityLong = response.results[0].geometry.location.lng;
 
         var mapText = $("#map-text");
-        mapText.append("<h5>" + "Explore " + cityName + "</h5>");
+        mapText.addClass("section-header");
+        mapText.text("Explore " + cityName);
 
         // The location of city
         var city = { lat: cityLat, lng: cityLong };

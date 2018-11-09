@@ -1,13 +1,17 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h5, p {
+  color: #000;
+};
+
 /* makes div's center */
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
-h1, h2, h3, h4, h5, h5, p {
-  color: #000;
-};
 
 /* button styles */
 button {
@@ -30,6 +34,16 @@ button {
 
 #add-city{
     background: #4caf50;
+}
+
+/* section header */
+.section-header {
+  color:black;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
 }
 
 /* card styles */
@@ -57,13 +71,32 @@ button {
 >>>>>>> e22f05d3608879015112abd8d6497a672310efad
 
 .events {
-    float: left;
+    /* float: left; */
+    display: inline-block;
     border: 1px solid #000;
     height: auto;
-    width: 500px;
-    margin: 5px;
-    padding: 3px;
+    width: auto;
+    margin: 10px;
+    padding: 5px;
 }
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+div.scroll-box {
+  background: none repeat scroll 0 0;
+  /* border: 3px solid #666; */
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
+
 
 /* MAP SECTION */
 #map {
