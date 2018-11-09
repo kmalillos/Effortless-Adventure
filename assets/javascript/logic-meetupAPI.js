@@ -37,7 +37,7 @@ $(document).on("click", ".city-button", function () {
 
     var meetupAPIkey = "73526c5158647a3534730555e7b56b";
     var CORSlink = "https://cors-anywhere.herokuapp.com/"
-    var meetupQueryURL = CORSlink + "https://api.meetup.com/find/upcoming_events?key=" + meetupAPIkey + "&sign=true&photo-host=public&lon=" + long + "&page=10&lat=" + lat;
+    var meetupQueryURL = CORSlink + "https://api.meetup.com/find/upcoming_events?key=" + meetupAPIkey + "&sign=true&photo-host=public&lon=" + long + "&page=15&lat=" + lat;
     // https://api.meetup.com/find/upcoming_events?&sign=true&photo-host=public&lon=-104.990251&page=10&lat=39.7392358
 
     $.ajax({
