@@ -5,11 +5,23 @@
 
 // =========================================================================================
 // EVENT LISTENER FOR ON-CLICK OF CITY-BUTTON
-// =========================================================================================
+// =========================================================================================//
+
+// WHEN PAGE LOADS
+
+var quoteText = $("#quote-text");
+    quoteText.addClass("section-header")
+    quoteText.text('"Adventure is out there..."')
+
+// $("#quote-text").hide(); 
+// $("#event-text").show();    
 
 $(document).on("click", ".city-button", function () {
 
   // console.log($(this).attr("city"));
+
+  $("#quote-text").hide(); 
+  $("#event-text").show();  
 
   // =========================================================================================
   // GOOGLE MAPS API AJAX CALL
