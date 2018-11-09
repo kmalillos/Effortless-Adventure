@@ -82,7 +82,7 @@ div.scroll-box {
   padding: 5px;
   position: relative;
   width: 100%;
-  height: 160px;
+  height: auto;
   overflow: auto;
 }
 

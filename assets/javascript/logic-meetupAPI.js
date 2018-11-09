@@ -73,19 +73,19 @@ $(document).on("click", ".city-button", function () {
         var eventDateFormat = moment(eventDate).format("MMM Do YYYY");
         var eventTime = response.events[i].local_time;
         var eventTimeFormat = moment(eventTime, "hh:mm").format("LT");
-        var eventTimeCountdown = "placeholder";
+        var eventCountdown = moment(eventDate).fromNow();
         // venue.name only works for some cities
         // var eventVenue = response.events[i].venue.name; 
-        var eventDesc = response.events[i].description
+        var eventDesc = response.events[i].descriptionW
         var eventLink = response.events[i].link
 
         var list = $("<ul>");
 
             list.append("<li><a href='" + eventLink + "' target='_blank'>" + eventName + "</a></li>");
-            list.append("<li>Hosted by: " + eventHost + "</li>");
+            list.append("<li>Hosted by: <br>" + eventHost + "</li>" + "<br>");
             list.append("<li>Date: " + eventDateFormat + "</li>");
-            list.append("<li>Local Time: " + eventTimeFormat + "</li>");
-            list.append("<li>Time until Event: " + eventTimeCountdown + "</li>" )
+            list.append("<li>Local Time: " + eventTimeFormat + "</li>"  + "<br>");
+            list.append("<li>Countdown: Event is " + eventCountdown + "!</li>" )
 
             // if (typeof eventVenue !== 'undefined') {
             // list.append("<li>Venue: " + eventVenue + "</li>");
