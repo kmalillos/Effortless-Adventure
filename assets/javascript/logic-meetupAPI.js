@@ -11,17 +11,13 @@
 
 var quoteText = $("#quote-text");
     quoteText.addClass("section-header")
-    quoteText.text('"Adventure is out there..."')
-
-// $("#quote-text").hide(); 
-// $("#event-text").show();    
+    quoteText.text('"Adventure is out there..."')  
 
 $(document).on("click", ".city-button", function () {
 
   // console.log($(this).attr("city"));
 
-  $("#quote-text").hide(); 
-  $("#event-text").show();  
+  $("#quote-text").hide();  
 
   // =========================================================================================
   // GOOGLE MAPS API AJAX CALL
@@ -108,7 +104,7 @@ $(document).on("click", ".city-button", function () {
         //eventHolder.append(list);
 
         var newEvent = $("<div>");
-            newEvent.addClass("events");
+            newEvent.addClass("event-style");
 
         newEvent.append(list);
         eventHolder.append(newEvent);

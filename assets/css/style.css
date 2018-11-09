@@ -36,7 +36,7 @@ button {
     background:#009688;
 }
 
-/* section header */
+/* section headers */
 .section-header {
   color:black;
   font-size: 20px;
@@ -46,9 +46,11 @@ button {
   margin: 10px;
 }
 
+/* WEATHER SECTION */
+
 /* card styles */
 .card{
-    margin-left:70px;
+    margin-left: 70px;
     float:left;
 }
 
@@ -56,23 +58,12 @@ button {
     text-align: center;
 }
 body{
-  background:url("../images/leaves/leaves.png.");
+  /* background:url("../images/leaves/leaves.png."); */
 }
 
-<<<<<<< HEAD
-.events {
-    float: left
-}
-
-
-
-
-/* maps */
-=======
 /* EVENT SECTION */
->>>>>>> e22f05d3608879015112abd8d6497a672310efad
 
-.events {
+.event-style {
     /* float: left; */
     display: inline-block;
     border: 1px solid #000;
