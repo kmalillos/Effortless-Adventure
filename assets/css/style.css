@@ -20,6 +20,7 @@ button {
     padding: 0;
     margin: 5px;
     background: #4caf50;
+    font-family: sans-serif;
 }
 
 /* search box */
@@ -60,7 +61,11 @@ button {
 } 
 
 
-
+h1{
+  font-style:bold;
+  font-size: 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 /* Custom Stylesheet */
 /**
