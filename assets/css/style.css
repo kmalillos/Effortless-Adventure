@@ -23,7 +23,7 @@ button {
     height: 100px;
     padding: 0;
     margin: 5px;
-    background: #4caf50;
+    background:#009688;
     font-family: sans-serif;
 }
 
@@ -33,7 +33,7 @@ button {
 }
 
 #add-city{
-    background: #4caf50;
+    background:#009688;
 }
 
 /* section headers */
@@ -57,7 +57,9 @@ button {
 .card-body{
     text-align: center;
 }
-
+body{
+  background:url("../images/leaves/leaves.png.");
+}
 
 /* EVENT SECTION */
 
@@ -100,6 +102,11 @@ h1{
   font-style:bold;
   font-size: 80px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow:
+		-1px -1px 0 rgb(250, 250, 250),
+		1px -1px 0 rgb(250, 250, 250),
+		-1px 1px 0 rgb(250, 250, 250),
+    1px 1px 0 rgb(250, 250, 250);
 }
 
 /* Custom Stylesheet */
