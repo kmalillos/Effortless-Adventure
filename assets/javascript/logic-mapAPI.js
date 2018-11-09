@@ -22,35 +22,39 @@
 $(document).on("click", ".city-button", function () {
 
     // console.log($(this).attr("city"));
-  
+
     // =========================================================================================
     // GOOGLE MAPS API AJAX CALL
     // =========================================================================================
-  
+
     var city = $(this).attr("city");
     var googleAPIkey = "AIzaSyD_Ko_8jQz0fztSy-EG6klDU0Rw8rr5AT0";
     var googleQueryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=" + googleAPIkey;
-  
+
     $.ajax({
-      url: googleQueryURL,
-      method: "GET"
+        url: googleQueryURL,
+        method: "GET"
     }).then(function (response) {
-      //console.log(response);
-      console.log("City: " + response.results[0].address_components[0].short_name);
-      console.log("Lat: " + response.results[0].geometry.location.lat);
-      console.log("Long: " + response.results[0].geometry.location.lng);
 
-       var cityLat = response.results[0].geometry.location.lat;
-       var cityLong = response.results[0].geometry.location.lng;
+        //console.log(response);
+        console.log("City: " + response.results[0].address_components[0].short_name);
+        console.log("Lat: " + response.results[0].geometry.location.lat);
+        console.log("Long: " + response.results[0].geometry.location.lng);
 
+        var cityName = response.results[0].address_components[0].short_name;
+        var cityLat = response.results[0].geometry.location.lat;
+        var cityLong = response.results[0].geometry.location.lng;
+
+        var mapText = $("#map-text");
+        mapText.append("<h5>" + "Explore " + cityName + "</h5>");
 
         // The location of city
-        var city = {lat: cityLat, lng: cityLong};
+        var city = { lat: cityLat, lng: cityLong };
         // The map, centered at city
         var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 4, center: city});
+            document.getElementById('map'), { zoom: 4, center: city });
         // The marker, positioned at city
-        var marker = new google.maps.Marker({position: city, map: map});
+        var marker = new google.maps.Marker({ position: city, map: map });
 
 
     }); // CLOSE AJAX CALL

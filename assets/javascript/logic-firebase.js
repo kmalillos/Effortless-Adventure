@@ -19,7 +19,7 @@ var database = firebase.database();
 var city = "";
 
 // =================================================================================================================================
-// FUNCTION
+// FUNCTIONS
 // =================================================================================================================================
 
 function addCity() {
@@ -49,7 +49,7 @@ function displayButtons() {
         var buttonHolder = $("#button-holder");
         var button = $("<button>")
         button.addClass("city-button")
-        button.addClass("btn btn-primary btn-floating btn-large material-icons")
+        button.addClass("btn btn-primary btn-floating btn-large material-icons  animated bounceInLeft")
         button.attr("city", city)
         button.append(city);
 

@@ -3,10 +3,13 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width:50%;
 }
 
-/* buttons */
+h1, h2, h3, h4, h5, h5, p {
+  color: #000;
+};
+
+/* button styles */
 button {
     margin: 5px;
 }
@@ -15,7 +18,9 @@ button {
     width: 100px;
     height: 100px;
     padding: 0;
+    margin: 5px;
     background: #4caf50;
+    font-family: sans-serif;
 }
 
 /* search box */
@@ -27,7 +32,7 @@ button {
     background: #4caf50;
 }
 
-
+/* card styles */
 .card{
     margin-left:70px;
     float:left;
@@ -37,10 +42,8 @@ button {
     text-align: center;
 }
 
-.card-header{
-    margin-left:70px;
-}
 
+<<<<<<< HEAD
 .events {
     float: left
 }
@@ -49,18 +52,31 @@ button {
 
 
 /* maps */
+=======
+/* EVENT SECTION */
+>>>>>>> e22f05d3608879015112abd8d6497a672310efad
 
-.map-card {
-    height: 100%;
-    width: 100%;
+.events {
+    float: left;
+    border: 1px solid #000;
+    height: auto;
+    width: 500px;
+    margin: 5px;
+    padding: 3px;
 }
 
+/* MAP SECTION */
 #map {
-    height: 400px;  
+    height: 500px;  
     width: 100%;  
-   } 
+} 
 
 
+h1{
+  font-style:bold;
+  font-size: 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 /* Custom Stylesheet */
 /**
