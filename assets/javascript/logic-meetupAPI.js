@@ -48,7 +48,8 @@ $(document).on("click", ".city-button", function () {
       // console.log(response);
 
       var eventText = $("#event-text");
-      eventText.append("<h5>" + "Events in " + city + "</h5>");
+      eventText.addClass("section-header");
+      eventText.text("Find Your Next Adventure in " + city);
 
       var eventHolder = $("#event-holder");
 

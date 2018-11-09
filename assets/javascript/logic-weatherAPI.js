@@ -23,7 +23,8 @@ $(document).on("click", ".city-button", function () {
       //console.log(response);
 
       var weatherText = $("#weather-text");
-      weatherText.append("<h5>" + "Weather in " + city + "</h5>");
+      weatherText.addClass("section-header");
+      weatherText.text("Weather in " + city);
   
       // SHOW CITY
         // console.log(response.name);
