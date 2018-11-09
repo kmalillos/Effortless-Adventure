@@ -6,24 +6,20 @@
     <title> Effortless Adventure </title>
 
     <meta charset="utf-8">
-    <link rel="icon" href="assets/images/mountain-3590181_960_720 favicon.jpg" type="image/png" sizes="16x16">
+    <link rel="icon" href="assets/images/mountain-small.jpg" type="image/png" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- STYLE  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- LOCAL CSS FILES -->
     <link href="assets/css/materialize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
     <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- Firebase link  -->
-    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
-
-    <!-- Moment.js  -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 
 <body>
@@ -40,7 +36,7 @@
                 <br><br>
             </div>
         </div>
-        <div class="parallax"><img src="assets/images/mountain.jpg" alt="mountains"></div>
+        <div class="parallax"><img src="assets/images/mountain-background.jpg" alt="mountains"></div>
     </div>
 
     <!-- CITIES BUTTON SECTION  -->
@@ -66,31 +62,21 @@
 
     <!-- WEATHER SECTION -->
     <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <div class="row center">
-                    <div class="card" style="width: 18rem; color:black">
-                        <div class="card-body">
-                            <h5 class="card-title">Weather</h5>
-                            <!-- weather info dynamically appears here -->
-                            <div>
-                                <p id="city-holder"></span>
-                            </div>
-                            <div>
-                                <p id="temp-holder"></span>
-                            </div>
-                            <div>
-                                <p id="weather-holder"></span>
-                            </div>
-                            <div>
-                                <p id="icon-holder"></span>
-                            </div>
-                        </div>
+        <div class="container section no-pad-bot">
+            <div class="row center">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="weather-text"></div>
+                        <!-- weather info dynamically appears here -->
+                        <!-- <p id="city-holder"></span> -->
+                            <p id="temp-holder"></span>
+                            <p id="weather-holder"></span>
+                            <p id="icon-holder"></span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="parallax"><img src="assets/images/mountain.jpg" alt="mountains"></div>
+        <div class="parallax"><img src="assets/images/mountain-background.jpg" alt="mountains"></div>
     </div>
 
     <!-- EVENT SECTION -->
@@ -98,9 +84,7 @@
         <div class="section">
             <div class="row">
                 <div class="col s12 center">
-                    <div class="card" style="width: 18rem; color:black">
-                        <div class="card-body"></div>
-                        <h5 id="card-title">Events</h5>
+                        <div id="event-text"></div>
                         <div><span id="event-holder"></span></div>
                     </div>
                 </div>
@@ -110,28 +94,26 @@
 
     <!-- GOOGLE MAP SECTION -->
     <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <div class="row center">
-                    <h5 class="card-title" style="color:black">Map</h5>
-                    <div id="map"></div>
-                </div>
+        <div class="container section no-pad-bot">
+            <div class="row center">
+                <div id="map-text"></div>
+                <div id="map"></div>
             </div>
         </div>
-        <div class="parallax"><img src="assets/images/mountain.jpg" alt="mountains"></div>
+        <div class="parallax"><img src="assets/images/mountain-background.jpg" alt="mountains"></div>
     </div>
 
 
-    <!-- footer -->
-
-
+    <!-- FOOTER -->
     <footer class="page-footer teal">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">About Us</h5>
                     <p class="grey-text text-lighten-4">We are a team of Bootcamp students working on this project like
-                        it's our full time job.</p>
+                        it's our
+                        full time job.</p>
+
 
                 </div>
                 <div class="col l3 s12">
@@ -143,7 +125,7 @@
                                 Kenney</a></li>
                         <li><a class="white-text" href="https://selinacore.github.io/Basic-Portfolio/" target="_blank">Selina
                                 Maes</a></li>
-                        <li><a class="white-text" href="">Tae Kim</a></li>
+                        <li><a class="white-text" href="#!">Tae Kim</a></li>
                     </ul>
                 </div>
                 <div class="col l3 s12">
@@ -155,8 +137,7 @@
                                 with Erin</a></li>
                         <li><a class="white-text" href="https://www.linkedin.com/in/selina-maes-92a044168/" target="_blank">Connect
                                 with Selina</a></li>
-                        <li><a class="white-text" href="https://www.linkedin.com/in/taeyeon-kim-56493493/" target="_blank">Connect
-                                with Tae</a></li>
+                        <li><a class="white-text" href="#!">Connect with Tae</a></li>
                     </ul>
                 </div>
             </div>
@@ -168,7 +149,11 @@
     </footer>
 
 
-    <!-- Bootstrap jQuery links -->
+    <!-- ====================================================================================== -->
+    <!-- S C R I P T   L I N K S -->
+    <!-- ====================================================================================== -->
+
+    <!-- Bootstrap JS links -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -178,21 +163,27 @@
 
     <!-- Materialize JS Links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/javascript/materialize.min.js" type="text/javascript"></script>
+    <!-- <script src="assets/javascript/materialize.min.js" type="text/javascript"></script> -->
     <script src="assets/javascript/init.js" type="text/javascript"></script>
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
 
-    <!-- Local Javascript  -->
+    <!-- Firebase link  -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+
+    <!-- Moment.js  -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Google Map API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_Ko_8jQz0fztSy-EG6klDU0Rw8rr5AT0&callback=initMap">
+    </script>
+
+    <!-- Local Javascript Files  -->
     <script src="assets/javascript/logic-firebase.js" type="text/javascript"></script>
     <script src="assets/javascript/logic-weatherAPI.js" type="text/javascript"></script>
     <script src="assets/javascript/logic-meetupAPI.js" type="text/javascript"></script>
     <script src="assets/javascript/logic-mapAPI.js" type="text/javascript"></script>
-
-    <!-- GOOGLE MAP API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_Ko_8jQz0fztSy-EG6klDU0Rw8rr5AT0&callback=initMap">
-    </script>
 
 </body>
 
