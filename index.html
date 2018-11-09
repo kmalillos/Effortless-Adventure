@@ -14,10 +14,10 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <!-- LOCAL CSS FILES -->
     <link href="assets/css/materialize.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
 
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -48,15 +48,28 @@
                     <div><span id="button-holder"></span></div>
                     <!-- Search Location Here -->
                     <form>
+
                         <div class="form-group">
-                            
-                            <input type="text" class="form-control" id="city-input" placeholder= "Add City Here">
-                         </div>
+                            <i class="material-icons">location_city</i>
+                            <input type="text" class="form-control" id="city-input" placeholder="Add City Here">
+                        </div>
                         <button type="submit" class="btn btn-primary animated flip" id="add-city">Submit</button>
+
                     </form>
                 </div>
+                <!--From Materialize-- to make city icon inline with text..I could not make it work with-out breaking the link to the API.
+                    <div class="row">
+                                    <form class="col s12">
+                                      <div class="row">
+                                        <div class="input-field col s6">
+                                          <i class="material-icons prefix">location_city</i>
+                                          <input id="icon_prefix" type="text" class="validate">
+                                          <label for="icon_prefix">First Name</label>
+                                        </div>-->
+
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -69,9 +82,9 @@
                         <div id="weather-text"></div>
                         <!-- weather info dynamically appears here -->
                         <!-- <p id="city-holder"></span> -->
-                            <p id="temp-holder"></span>
+                        <p id="temp-holder"></span>
                             <p id="weather-holder"></span>
-                            <p id="icon-holder"></span>
+                                <p id="icon-holder"></span>
                     </div>
                 </div>
             </div>
@@ -84,12 +97,12 @@
         <div class="section">
             <div class="row">
                 <div class="col s12 center">
-                        <div id="event-text"></div>
-                        <div><span id="event-holder"></span></div>
-                    </div>
+                    <div id="event-text"></div>
+                    <div><span id="event-holder"></span></div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- GOOGLE MAP SECTION -->
@@ -110,7 +123,8 @@
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">About Us</h5>
-                    <p class="grey-text text-lighten-4">We are a team of Bootcamp students working on this project like
+                    <p class="grey-text text-lighten-4">We are a team of Bootcamp students working on this project
+                        like
                         it's our
                         full time job.</p>
 
