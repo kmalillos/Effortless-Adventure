@@ -34,7 +34,7 @@ button {
 }
 
 .card-body{
-  margin-left:100px;
+    text-align: center;
 }
 
 .card-header{
@@ -44,6 +44,9 @@ button {
 .events {
     float: left
 }
+
+
+
 
 /* maps */
 
