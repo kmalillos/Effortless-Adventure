@@ -22,6 +22,10 @@ $(document).on("click", ".city-button", function () {
   
       //console.log(response);
 
+      var weatherStyle = $(".weather-style")
+          weatherStyle.html("<img id='weather-cloud' src='assets/images/weather-cloud.png'>")
+          
+
       var weatherText = $("#weather-text");
       weatherText.addClass("section-header");
       weatherText.text("Weather in " + city);

@@ -4,10 +4,8 @@
 
 
 // =========================================================================================
-// EVENT LISTENER FOR ON-CLICK OF CITY-BUTTON
+// WHEN PAGE LOADS...
 // =========================================================================================//
-
-// WHEN PAGE LOADS AND NO JAVASCRIPT DYNAMIC FUNCTIONALITY
 
 var quotes = 
   ["''Adventure is out there.''", 
@@ -20,13 +18,16 @@ var quotes =
   "''One way to get the most out of life is to look upon it as an adventure.''"]
 
 var randomVal  = Math.floor(Math.random() * quotes.length);
-  
+
+// console.log(quotes[randomVal]);
+
 var quoteText = $("#quote-text");
     quoteText.addClass("quote-style")
     quoteText.text(quotes[randomVal]);  
 
-// console.log(quotes[randomVal]);
-
+// =========================================================================================
+// EVENT LISTENER FOR ON-CLICK OF CITY-BUTTON
+// =========================================================================================//
 
 $(document).on("click", ".city-button", function () {
 
