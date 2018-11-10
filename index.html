@@ -15,10 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    
     <!-- LOCAL CSS FILES -->
     <link href="assets/css/materialize.min.css" rel="stylesheet">
-
-
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -31,7 +30,7 @@
                 <br><br>
                 <h1 class="header center teal-text text-lighten-2">Effortless Adventure!</h1>
                 <div class="row center">
-                    <h5 class="header col s12 light">Find events going on in your city.</h5>
+                    <h4 class="header col s12 light">Your next adventure is a click away.</h5>
                 </div>
                 <br><br>
             </div>
@@ -48,28 +47,15 @@
                     <div><span id="button-holder"></span></div>
                     <!-- Search Location Here -->
                     <form>
-
                         <div class="form-group">
                             <i class="material-icons">location_city</i>
                             <input type="text" class="form-control" id="city-input" placeholder="Add City Here">
                         </div>
                         <button type="submit" class="btn btn-primary animated flip" id="add-city">Submit</button>
-
                     </form>
                 </div>
-                <!--From Materialize-- to make city icon inline with text..I could not make it work with-out breaking the link to the API.
-                    <div class="row">
-                                    <form class="col s12">
-                                      <div class="row">
-                                        <div class="input-field col s6">
-                                          <i class="material-icons prefix">location_city</i>
-                                          <input id="icon_prefix" type="text" class="validate">
-                                          <label for="icon_prefix">First Name</label>
-                                        </div>-->
-
             </div>
         </div>
-    </div>
     </div>
 
 
@@ -77,18 +63,20 @@
     <div class="parallax-container valign-wrapper">
         <div class="container section no-pad-bot">
             <div class="row center">
-                <div class="card">
-                    <div class="card-body">
-                        <div id="weather-text"></div>
-                        <!-- weather info dynamically appears here -->
-                        <div class="weather-style">
-                        <!-- <p id="city-holder"></span> -->
-                        <p id="temp-holder"></span>
-                            <p id="weather-holder"></span>
-                            <p id="icon-holder"></span>
+                <div class="col s4"> </div>
+                <div class="col s4">
+                    <div class="weather-style">
+                        <img id="weather-cloud" src="assets/images/weather-cloud.png" alt="cloud">
+                        <div class="cloud-text">
+                            <!-- weather info dynamically appears here -->
+                            <p id="weather-text"></p>
+                            <p id="temp-holder"></p>
+                            <p id="weather-holder"></p>
+                            <p id="icon-holder"></p>
                         </div>
                     </div>
                 </div>
+                <div class="col s4"></div>
             </div>
         </div>
         <div class="parallax"><img src="assets/images/mountain-background.jpg" alt="mountains"></div>
@@ -96,27 +84,25 @@
 
     <!-- EVENT SECTION -->
     <!-- <div class="container"> -->
-        <div class="section">
-            <div class="row">
-                <div class="col s12 center">
-                        <div id="quote-text"></div>
-                        <div id="event-text"></div>
-                        <!-- <div><span id="event-holder"></span></div> -->
-                        <div class="event-holder"></div>
-                    </div>
-                </div>
+    <div class="section">
+        <div class="row">
+            <div class="col s12 center">
+                <div id="quote-text"></div>
+                <div id="event-text"></div>
+                <div class="event-holder"></div>
             </div>
         </div>
+    </div>
     <!-- </div> -->
 
     <!-- GOOGLE MAP SECTION -->
     <div class="parallax-container valign-wrapper">
-        <div class="container"> 
+        <div class="container">
             <div class="section no-pad-bot">
-            <div class="row center">
-                <div id="map-text"></div>
-                <div id="map"></div>
-            </div>
+                <div class="row center">
+                    <div id="map-text"></div>
+                    <div id="map"></div>
+                </div>
             </div>
         </div>
         <div class="parallax"><img src="assets/images/mountain-background.jpg" alt="mountains"></div>
@@ -129,12 +115,10 @@
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">About Us</h5>
-                    <p class="grey-text text-lighten-4">We are a team of Bootcamp students working on this project
-                        like
-                        it's our
-                        full time job.</p>
-
-
+                    <p class="grey-text text-lighten-4">
+                    We are an all-women team of Full Stack Web Developer Bootcamp students working on this project like it's our full time job.
+                    Based in Colorado, we're always ready for the next adventure!
+                    </p>
                 </div>
                 <div class="col l3 s12">
                     <h5 class="white-text">Portfolios</h5>
@@ -163,7 +147,9 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                    Layout by <a class="white-text text-lighten-3" href="http://materializecss.com">Materialize</a> |
+                    Powered by Open Weather, Google Maps, and Meet Up |
+                    &copy; Effortless Adventure 2018
                 </div>
             </div>
     </footer>

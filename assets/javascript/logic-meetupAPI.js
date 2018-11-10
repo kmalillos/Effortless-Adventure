@@ -4,14 +4,30 @@
 
 
 // =========================================================================================
-// EVENT LISTENER FOR ON-CLICK OF CITY-BUTTON
-// =========================================================================================//
+// ON PAGE LOAD
+// =========================================================================================
 
-// WHEN PAGE LOADS
+var quotes = 
+  ["''Adventure is out there.''", 
+  "''Oh, the places you'll go''",   
+  "''Life is either a daring adventure or nothing.''",
+  "''The magic happens outside of your comfort zone''",
+  "''Remember that every good friend was once a stranger''", 
+  "''There are no strangers here. Only friends you haven't met''",  
+  "''I'm in love with cities I've never been to and people I've never met.''",
+  "''One way to get the most out of life is to look upon it as an adventure.''"]
+
+var randomVal  = Math.floor(Math.random() * quotes.length);
+
+// console.log(quotes[randomVal]);
 
 var quoteText = $("#quote-text");
-    quoteText.addClass("section-header")
-    quoteText.text('"Adventure is out there..."')  
+    quoteText.addClass("quote-style")
+    quoteText.text(quotes[randomVal]);  
+
+// =========================================================================================
+// EVENT LISTENER FOR ON-CLICK OF CITY-BUTTON
+// =========================================================================================
 
 $(document).on("click", ".city-button", function () {
 

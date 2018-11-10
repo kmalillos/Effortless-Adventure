@@ -1,11 +1,18 @@
 // Open Weather API Key: 89635bfae26331da7c18c8fa78db7fac
 
 // =========================================================================================
+// ON PAGE LOAD
+// =========================================================================================
+
+$("#weather-cloud").hide();  
+
+// =========================================================================================
 // EVENT LISTENER FOR ON-CLICK OF CITY-BUTTON
 // =========================================================================================
 $(document).on("click", ".city-button", function () {
   
     // console.log($(this).attr("city"));
+    $("#weather-cloud").show();  
   
     // =========================================================================================
     // OPEN-WEATHER API AJAX CALL
@@ -22,6 +29,8 @@ $(document).on("click", ".city-button", function () {
   
       //console.log(response);
 
+      var weatherStyle = $(".weather-style")
+          
       var weatherText = $("#weather-text");
       weatherText.addClass("section-header");
       weatherText.text("Weather in " + city);
