@@ -59,21 +59,15 @@ button {
 
 /* WEATHER SECTION */
 
-/* .weather-div {
-  position: relative;
-  text-align: center;
-  color: transparent;
-}  */
-
 #weather-cloud {
-  height:250px;
+  height:275px;
   width: 400px;
+  opacity: 0.75;
 }
 
 .weather-style {
   position: relative;
   text-align: center;
-  color: white;
 }
 
 .cloud-text {
@@ -82,8 +76,6 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-
 
 /* EVENT SECTION */
 
