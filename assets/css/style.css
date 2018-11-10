@@ -1,6 +1,5 @@
 body {
-  /* background:url("../images/leaves/leaves.png."); */
-  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h5, p {
@@ -8,11 +7,11 @@ h1, h2, h3, h4, h5, h5, p {
 };
 
 /* makes div's center */
-.div-center {
+/* .div-center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 /* button styles */
 button {
@@ -22,13 +21,19 @@ button {
 .btn-floating.btn-large  {
     width: 100px;
     height: 100px;
-    padding: ;
-    margin: 2px;
+    /* padding: 2px; */
+    margin: 5px;
     background:#009688;
     font-family: sans-serif;
 }
 
-/* search box */
+/* form and search box */
+
+.form-group {
+  /* float: left; */
+  /* display: inline-block; */
+}
+
 #search-box{
     text-align:center;
 }
@@ -113,7 +118,8 @@ div.scroll-box {
     width: 100%;  
 } 
 
-
+/* header section */
+/* needs to be at the end here */
 h1{
   font-style:bold;
   font-size: 80px;
@@ -123,7 +129,7 @@ h1{
 		1px -1px 0 rgb(250, 250, 250),
 		-1px 1px 0 rgb(250, 250, 250),
     1px 1px 0 rgb(250, 250, 250);
-}
+};
 
 /* Custom Stylesheet */
 /**
