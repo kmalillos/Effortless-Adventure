@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  /* background:url("../images/leaves/leaves.png."); */
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 h1, h2, h3, h4, h5, h5, p {
@@ -7,7 +8,7 @@ h1, h2, h3, h4, h5, h5, p {
 };
 
 /* makes div's center */
-.center {
+.div-center {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -21,8 +22,8 @@ button {
 .btn-floating.btn-large  {
     width: 100px;
     height: 100px;
-    padding: 0;
-    margin: 5px;
+    padding: ;
+    margin: 2px;
     background:#009688;
     font-family: sans-serif;
 }
@@ -30,6 +31,7 @@ button {
 /* search box */
 #search-box{
     text-align:center;
+    display: inline-block;
 }
 
 #add-city{
@@ -56,9 +58,6 @@ button {
 
 .card-body{
     text-align: center;
-}
-body{
-  /* background:url("../images/leaves/leaves.png."); */
 }
 
 /* EVENT SECTION */

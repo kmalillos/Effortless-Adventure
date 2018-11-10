@@ -7,11 +7,24 @@
 // EVENT LISTENER FOR ON-CLICK OF CITY-BUTTON
 // =========================================================================================//
 
-// WHEN PAGE LOADS
+// WHEN PAGE LOADS AND NO JAVASCRIPT DYNAMIC FUNCTIONALITY
 
+var quotes = 
+  ["''Adventure is out there.''", 
+  "''Life is either a daring adventure or nothing.''",
+  "''Oh, the places you'll go''", 
+  "''There are no strangers here. Only friends you haven't met''", 
+  "''Remember that every good friend was once a stranger''", 
+  "''The magic happens outside of your comfort zone''"]
+
+var randomVal  = Math.floor(Math.random() * quotes.length);
+  
 var quoteText = $("#quote-text");
     quoteText.addClass("section-header")
-    quoteText.text('"Adventure is out there..."')  
+    quoteText.text(quotes[randomVal]);  
+
+// console.log(quotes[randomVal]);
+
 
 $(document).on("click", ".city-button", function () {
 
