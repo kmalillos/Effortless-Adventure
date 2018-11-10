@@ -31,7 +31,6 @@ button {
 /* search box */
 #search-box{
     text-align:center;
-    display: inline-block;
 }
 
 #add-city{
@@ -46,6 +45,16 @@ button {
   text-align: center;
   padding: 5px;
   margin: 10px;
+}
+
+/* quote */
+.quote-style {
+  color:#009688;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 5px;
 }
 
 /* WEATHER SECTION */

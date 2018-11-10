@@ -11,16 +11,18 @@
 
 var quotes = 
   ["''Adventure is out there.''", 
+  "''Oh, the places you'll go''",   
   "''Life is either a daring adventure or nothing.''",
-  "''Oh, the places you'll go''", 
-  "''There are no strangers here. Only friends you haven't met''", 
+  "''The magic happens outside of your comfort zone''",
   "''Remember that every good friend was once a stranger''", 
-  "''The magic happens outside of your comfort zone''"]
+  "''There are no strangers here. Only friends you haven't met''",  
+  "''I'm in love with cities I've never been to and people I've never met.''",
+  "''One way to get the most out of life is to look upon it as an adventure.''"]
 
 var randomVal  = Math.floor(Math.random() * quotes.length);
   
 var quoteText = $("#quote-text");
-    quoteText.addClass("section-header")
+    quoteText.addClass("quote-style")
     quoteText.text(quotes[randomVal]);  
 
 // console.log(quotes[randomVal]);
