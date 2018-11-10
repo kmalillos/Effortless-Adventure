@@ -59,23 +59,30 @@ button {
 
 /* WEATHER SECTION */
 
-.weather-div {
+/* .weather-div {
   position: relative;
   text-align: center;
   color: transparent;
-} 
+}  */
+
+#weather-cloud {
+  height:250px;
+  width: 400px;
+}
 
 .weather-style {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.cloud-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-#weather-cloud {
-  height:250px;
-  width: 400px;
-}
 
 
 /* EVENT SECTION */
