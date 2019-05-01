@@ -1,6 +1,6 @@
 # Effortless Adventure
 
-Whether you're a local, a tourist, or a nomad, sometimes, you just want to know what's happening in the city you're in. This app makes coming up with something to do effortless.
+Whether you're a local, a tourist, or a nomad, sometimes, you just want to know what's happening in the city you're in. This app makes coming up with a new adventure effortless!
 
 ### Try It Out: [Live Page Here](https://kmalillos.github.io/eff-adv/)
 
@@ -8,14 +8,15 @@ Whether you're a local, a tourist, or a nomad, sometimes, you just want to know 
 
 ![Image](https://github.com/kmalillos/eff-adv/blob/master/readme/Screenshot-2.JPG)
 
-![Image](https://github.com/kmalillos/eff-adv/blob/master/readme/Screenshot-3.JPG)
-
-![Image](https://github.com/kmalillos/eff-adv/blob/master/readme/Screenshot-4.JPG)
 
 ## How It Works
 
 * User selects a city or adds a new city
 * Page will dynamically update with selected city's current weather, upcoming events, and Google map
+
+![Image](https://github.com/kmalillos/eff-adv/blob/master/readme/Screenshot-3.JPG)
+
+![Image](https://github.com/kmalillos/eff-adv/blob/master/readme/Screenshot-4.JPG)
 
     <!-- ![Image](link) -->
 
