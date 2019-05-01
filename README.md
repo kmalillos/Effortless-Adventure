@@ -18,8 +18,6 @@ Whether you're a local, a tourist, or a nomad, sometimes, you just want to know 
 
 ![Image](https://github.com/kmalillos/eff-adv/blob/master/readme/Screenshot-4.JPG)
 
-    <!-- ![Image](link) -->
-
 <!-- **Sample Demo:** [Link]() -->
 
 ## Developer Notes
@@ -32,6 +30,9 @@ Whether you're a local, a tourist, or a nomad, sometimes, you just want to know 
 * Firebase
 * API's: Google API, Meetup API, Weather API
 
+### Future Developments:
+* Build with React
+* Add CRUD methods to city buttons
 
 ## Contributors
 
