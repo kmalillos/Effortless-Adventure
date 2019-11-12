@@ -1,8 +1,8 @@
 # Effortless Adventure
 
-Whether you're a local, a tourist, or a nomad, sometimes, you just want to know what's happening in the city you're in. This app makes coming up with a new adventure effortless!
-
 **<span style="color:red">UPDATE: The app currently does not full functionality due to access to Google API has expired.</span> See photos below show how app worked with Google API. Updates to come. Thank you!**
+
+Whether you're a local, a tourist, or a nomad, sometimes, you just want to know what's happening in the city you're in. This app makes coming up with a new adventure effortless!
 
 ### Try It Out: [Live Page Here](https://kmalillos.github.io/eff-adv/)
 
