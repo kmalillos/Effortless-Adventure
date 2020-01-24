@@ -11,7 +11,7 @@
 
     <!-- STYLE  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
@@ -25,7 +25,8 @@
 <body>
     <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        Please Note: This app currently does not have full functionality due to Meetup API's new 0Auth requirement. Working on updates soon. Thank you!
+        Please Note: This app currently does not have full functionality due to Meetup API's new 0Auth requirement.
+        Working on updates soon. Thank you!
     </div>
 
     <!-- TITLE SECTION -->
@@ -48,13 +49,16 @@
         <div class="section">
             <div class="row">
                 <div class="col m12">
+                    <h5 class="center">Select a city:</h5>
                     <!-- city buttons dynamically appear here -->
                     <div><span id="button-holder"></span></div>
                     <!-- Search Location Here -->
                     <form>
                         <div class="form-group">
+
                             <!-- <i class="material-icons">location_city</i> -->
-                            <input type="text" class="form-control" id="city-input" placeholder="Add City Here">
+                            <input type="text" class="form-control" id="city-input"
+                                placeholder="... or add New City Here!">
                         </div>
                         <button type="submit" class="btn btn-primary" id="add-city">Submit</button>
                     </form>
@@ -199,8 +203,8 @@
 
     <!-- Google Map API -->
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_nYBaMy24N19jV0MZ8vJRvNOlOGblbSc&callback=initMap">
-  </script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_nYBaMy24N19jV0MZ8vJRvNOlOGblbSc&callback=initMap">
+        </script>
 
     <!-- Local Javascript Files  -->
     <script src="assets/javascript/logic-firebase.js" type="text/javascript"></script>
