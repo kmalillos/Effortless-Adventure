@@ -1,6 +1,6 @@
 # Effortless Adventure
 
-**<span style="color:red">UPDATE: The app currently does not have full functionality due to access to Google API has expired.</span> See photos below show how app worked with Google API. Updates to come. Thank you!**
+**<span style="color:red">UPDATE: The app currently does not have full functionality due to Meetup API's new 0Auth requirement.</span> See photos below show how app previous functionality. Working on updates soon. Thank you!**
 
 Whether you're a local, a tourist, or a nomad, sometimes, you just want to know what's happening in the city you're in. This app makes coming up with a new adventure effortless!
 

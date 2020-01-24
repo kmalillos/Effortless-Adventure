@@ -1,4 +1,4 @@
-// Google Maps APIkey: AIzaSyD_Ko_8jQz0fztSy-EG6klDU0Rw8rr5AT0 
+// Google Maps APIkey: AIzaSyBcNazEdzZzyCY6oPSBO7UIgDZgno5vxlA
 // Meetup API Key: 73526c5158647a3534730555e7b56b
 // NEED THIS with Meetup: https://cors-anywhere.herokuapp.com/
 
@@ -40,7 +40,7 @@ $(document).on("click", ".city-button", function () {
   // =========================================================================================
 
   var city = $(this).attr("city");
-  var googleAPIkey = "AIzaSyD_Ko_8jQz0fztSy-EG6klDU0Rw8rr5AT0";
+  var googleAPIkey = "AIzaSyA_nYBaMy24N19jV0MZ8vJRvNOlOGblbSc";
   var googleQueryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=" + googleAPIkey;
 
   $.ajax({
@@ -64,12 +64,15 @@ $(document).on("click", ".city-button", function () {
     var meetupQueryURL = CORSlink + "https://api.meetup.com/find/upcoming_events?key=" + meetupAPIkey + "&sign=true&photo-host=public&lon=" + long + "&page=15&lat=" + lat;
     // https://api.meetup.com/find/upcoming_events?&sign=true&photo-host=public&lon=-104.990251&page=10&lat=39.7392358
 
+    var newQuery = "https://api.meetup.com1/find/groups2?zip=11211&radius=1&category=253&order=members4";
+
     $.ajax({
-      url: meetupQueryURL,
+      // url: meetupQueryURL,
+      url: newQuery,
       method: "GET"
     }).then(function (response) {
     
-      // console.log(response);
+      console.log("Meetup ", response);
 
       var eventText = $("#event-text");
       eventText.addClass("section-header");

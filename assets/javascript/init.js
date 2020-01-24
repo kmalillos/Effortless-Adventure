@@ -1,5 +1,10 @@
 // Open Weather API Key: 89635bfae26331da7c18c8fa78db7fac
 
+function alertMessage() {
+  alert("Please Note: This app currently does not have full functionality due to Meetup API's new 0Auth requirement. Working on updates soon. Thank you!");
+}
+alertMessage();
+
 // =========================================================================================
 // EVENT LISTENER FOR ON-CLICK OF CITY-BUTTON
 // =========================================================================================

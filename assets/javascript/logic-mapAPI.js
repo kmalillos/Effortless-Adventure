@@ -1,4 +1,5 @@
-// Google Maps APIkey: AIzaSyD_Ko_8jQz0fztSy-EG6klDU0Rw8rr5AT0 
+// Google Maps APIkey: AIzaSyA_nYBaMy24N19jV0MZ8vJRvNOlOGblbSc
+
 
 // =========================================================================================
 // S T A R T E R   C O D E 
@@ -28,7 +29,7 @@ $(document).on("click", ".city-button", function () {
     // =========================================================================================
 
     var city = $(this).attr("city");
-    var googleAPIkey = "AIzaSyD_Ko_8jQz0fztSy-EG6klDU0Rw8rr5AT0";
+    var googleAPIkey = "AIzaSyA_nYBaMy24N19jV0MZ8vJRvNOlOGblbSc";
     var googleQueryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=" + googleAPIkey;
 
     $.ajax({
@@ -36,7 +37,7 @@ $(document).on("click", ".city-button", function () {
         method: "GET"
     }).then(function (response) {
 
-        //console.log(response);
+        console.log("Google Maps", response);
         console.log("City: " + response.results[0].address_components[0].short_name);
         console.log("Lat: " + response.results[0].geometry.location.lat);
         console.log("Long: " + response.results[0].geometry.location.lng);
@@ -53,9 +54,18 @@ $(document).on("click", ".city-button", function () {
         var city = { lat: cityLat, lng: cityLong };
         // The map, centered at city
         var map = new google.maps.Map(
-            document.getElementById('map'), { zoom: 4, center: city });
+            document.getElementById('map'), { zoom: 15, center: city });
+        // var map;
+        // function initMap() {
+        //   map = new google.maps.Map(document.getElementById('map'), {
+        //     center: {city},
+        //     zoom: 8
+        //   });
+        // }
         // The marker, positioned at city
         var marker = new google.maps.Marker({ position: city, map: map });
+
+
 
 
     }); // CLOSE AJAX CALL
