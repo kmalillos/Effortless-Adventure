@@ -48,8 +48,8 @@ function displayButtons() {
         // HOOK TO HTML
         var buttonHolder = $("#button-holder");
         var button = $("<button>")
-        button.addClass("city-button")
-        button.addClass("btn btn-primary btn-floating btn-large material-icons animated bounceInLeft")
+        // button.addClass("btn btn-primary btn-flat btn-large material-icons animated bounceInLeft")
+        button.addClass("city-button btn btn-primary") 
         button.attr("city", city)
         button.append(city);
 

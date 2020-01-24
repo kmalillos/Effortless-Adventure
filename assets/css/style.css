@@ -6,33 +6,13 @@ h1, h2, h3, h4, h5, h5, p {
   color: #000;
 };
 
-/* makes div's center */
-/* .div-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
 /* button styles */
-button {
-    margin: 5px;
-}
-
-.btn-floating.btn-large  {
-    width: 100px;
-    height: 100px;
-    /* padding: 2px; */
-    margin: 5px;
-    background:#009688;
-    font-family: sans-serif;
+.city-button {
+  margin:10px !important;
 }
 
 /* form and search box */
 
-.form-group {
-  /* float: left; */
-  /* display: inline-block; */
-}
 
 #search-box{
     text-align:center;
